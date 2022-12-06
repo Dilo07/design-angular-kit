@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'componenti', component: RouterDispatcherComponent, children: [
     { path: '', redirectTo: 'badge', pathMatch: 'full' },
     { path: 'badge', loadChildren: () => import('src/app/badge/badge.module').then(m => m.BadgeModule) },
+    { path: 'card', loadChildren: () => import('src/app/card/card.module').then(m => m.CardModule) },
     { path: 'checkbox', loadChildren: () => import('src/app/checkbox/checkbox.module').then(m => m.CheckboxModule) },
     { path: 'progress-bar', loadChildren: () => import('src/app/progress-bar/progress-bar.module').then(m => m.ProgressBarModule) },
     { path: 'toggle', loadChildren: () => import('src/app/toggle/toggle.module').then(m => m.ToggleModule) },
